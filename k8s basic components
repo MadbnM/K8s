@@ -1,0 +1,32 @@
+Pods:
+  - Smallest unit of K8s
+  - Abstraction over container
+  - insided node
+  - each pod gets its own IP address (internal virtual ip address)
+    * ephemeral ip is lose when pod will die
+  
+Service
+  - permanent IP address
+  - lifecycle of pod and service are NOT connected
+  - external service: 
+  - internal service: 
+  
+Config map
+  - external configuration of your application
+  
+Secret
+  - just like config map but for sensitive data
+  - base64 encoded
+  - used to store secret data
+  
+Worker Node
+  - Container Runtime : Docker
+  - Kubelet: Interactes with both the container and the node, starts the pod with a conontainer insid
+  - Kube proxy: forwards the request
+ 
+Master Node
+  - API Server: cluster gateway, Interact with the API server using some client like UI, kubelete k8s API
+              : also serves as ,validates requests
+  - Scheduler: where to put the pod
+  - controller manager: detects cluster state changes
+  - etcd: key value store of the cluster state
